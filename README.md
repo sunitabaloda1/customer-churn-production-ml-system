@@ -13,6 +13,8 @@ The system is designed with a production-oriented mindset rather than as a stand
 ## Solution Overview
 
 The project implements two connected workflows.
+<img width="968" height="1008" alt="image" src="https://github.com/user-attachments/assets/803d7705-1a3f-417c-ba63-ecb85c83c3e6" />
+
 
 ### Offline Training Pipeline
 
@@ -55,6 +57,8 @@ Churn Prediction
        ↓
 Probability + Prediction + Model Version
 </pre>
+
+<img width="975" height="1218" alt="image" src="https://github.com/user-attachments/assets/b6211c52-9423-43a4-a078-96f7ffdea8b9" />
 
 ## Key Project Highlights
 
@@ -113,6 +117,8 @@ Additional business-oriented features were created to improve the representation
 | `FiberCustomer` | Indicator for fiber internet customers |
 
 The feature engineering logic is implemented as part of the shared preprocessing workflow to maintain consistency between training and inference.
+<img width="975" height="650" alt="image" src="https://github.com/user-attachments/assets/913a990e-9549-4a95-898f-6360c11aebca" />
+
 
 ## Data Preparation
 
@@ -156,6 +162,9 @@ Advantages:
 - Handles interactions between features
 - Provides a complementary approach to the linear baseline
 
+<img width="931" height="1397" alt="image" src="https://github.com/user-attachments/assets/81ec3610-6a1e-490a-911b-ca6530ac6f7e" />
+
+
 ## Model Promotion Policy
 
 A simple model promotion gate was implemented.
@@ -168,6 +177,8 @@ The candidate model is promoted only when:
 Otherwise, the baseline model is retained.
 
 This prevents a candidate model from replacing the existing model unless it satisfies the defined performance requirement.
+
+<img width="900" height="1350" alt="image" src="https://github.com/user-attachments/assets/2a4652f9-66d1-4aa4-a961-c85fa7f97768" />
 
 ## Model Persistence
 
@@ -202,6 +213,10 @@ The `/predict` endpoint returns:
 
 Swagger UI is available through FastAPI for interactive API testing.
 
+<img width="879" height="1319" alt="image" src="https://github.com/user-attachments/assets/6e8214a6-a94c-4740-af72-a53be80b30db" />
+
+
+
 ## API Performance
 
 The prediction API was tested using 20 consecutive requests.
@@ -216,6 +231,8 @@ The prediction API was tested using 20 consecutive requests.
 The first request was comparatively slower due to model loading/warm-up. Subsequent requests generally completed within approximately 26–40 ms.
 
 The observed latency demonstrates that the current lightweight implementation can support low-latency online inference within the scope of this mini production ML system.
+<img width="832" height="521" alt="image" src="https://github.com/user-attachments/assets/ec5e2283-6ecd-4f71-bffd-d5ed40e2f2e9" />
+
 
 ## Evaluation & Production Considerations
 
@@ -284,6 +301,8 @@ The baseline `MonthlyCharges` mean is **64.76**.
 A **10% drift threshold** is used for the current lightweight drift check.
 
 For the evaluated dataset, observed drift was **0.00%**, which passed the defined threshold.
+<img width="740" height="275" alt="image" src="https://github.com/user-attachments/assets/c943fa89-41cb-44dd-ab1c-fb11ae4d7f4c" />
+
 
 ### Cost Considerations
 
@@ -353,6 +372,9 @@ Potential retraining triggers include:
 
 These rules provide a simple framework for moving toward a more automated model lifecycle.
 
+<img width="516" height="326" alt="image" src="https://github.com/user-attachments/assets/b2baef6e-b4eb-4037-a79a-c73e8e67df3d" />
+
+       
 ## Testing
 
 The system was tested through multiple mechanisms:
@@ -366,6 +388,16 @@ The system was tested through multiple mechanisms:
 - Latency testing
 
 Testing covers both individual components and the end-to-end prediction workflow.
+<img width="466" height="369" alt="image" src="https://github.com/user-attachments/assets/96145d85-72f5-4541-9ed4-f6e1b27b1e14" />
+
+<img width="822" height="907" alt="image" src="https://github.com/user-attachments/assets/d0ecfa00-0451-4ae0-a108-0666cb08e8d8" />
+
+<img width="827" height="472" alt="image" src="https://github.com/user-attachments/assets/ceadf328-a965-4145-87b6-4ba454bd173b" />
+
+<img width="939" height="494" alt="image" src="https://github.com/user-attachments/assets/8aeb3a49-0146-4417-9a11-a5ef74fcc960" />
+
+<img width="944" height="439" alt="image" src="https://github.com/user-attachments/assets/0292507a-2772-4147-84b9-95f2a9201c3d" />
+
 
 ## Incident Response
 
@@ -395,6 +427,9 @@ The project includes documented responses for common operational scenarios.
 - Restart or redeploy the service
 - Verify `/health`
 - Execute a test prediction
+
+<img width="866" height="554" alt="image" src="https://github.com/user-attachments/assets/867d7ffd-59a2-4817-b959-dd8a20b25a02" />
+
 
 ## Repository Structure
 
@@ -485,6 +520,9 @@ This project intentionally focuses on demonstrating a **production-oriented ML l
 - Retraining strategy
 - Incident-response approach
 
+<img width="979" height="1223" alt="image" src="https://github.com/user-attachments/assets/c97fa8c0-7996-4ab7-a087-950257cbb657" />
+
+
 ### Potential Future Enhancements
 
 For a larger enterprise production environment, the system could be extended with:
@@ -535,6 +573,8 @@ Retraining Strategy
 
 The primary focus was not only on building a predictive model, but on designing the surrounding engineering components required to operate an ML solution as a service.
 
+
+
 ## Project Context
 
 This project was developed as part of the **M.Sc. Data Science & Artificial Intelligence** program at BITS Pilani.
@@ -545,6 +585,6 @@ The assignment focuses on designing and executing a mini production ML system, w
 
 **Sunita Baloda**
 
-Technology, Data & AI Transformation Leader | BFSI | AI/ML | Data & Analytics
+Technology, Data & AI Transformation | BFSI | AI/ML | Data & Analytics
 
 M.Sc. Data Science & Artificial Intelligence
