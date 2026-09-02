@@ -217,9 +217,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# README files already maintained separately
-README.md
-artifacts/eval/README.md
 
 # Generated artifacts
 artifacts/*
