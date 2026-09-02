@@ -1,0 +1,9 @@
+{
+    "requests_tested": 20,
+    "average_latency_ms": 42.98,
+    "minimum_latency_ms": 25.81,
+    "maximum_latency_ms": 125.88,
+    "p95_latency_ms": 64.74,
+    "status": "PASSED",
+    "remarks": "Latency measured using 20 API requests against the FastAPI prediction endpoint."
+}

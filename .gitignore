@@ -228,3 +228,13 @@ artifacts/*
 # README files already maintained separately
 README.md
 artifacts/eval/README.md
+
+# Project data
+data/raw/
+data/processed/
+
+# Trained model artifacts
+models/*.pkl
+
+# Runtime logs
+logs/
